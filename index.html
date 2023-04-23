@@ -1,63 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="swiper.js"></script>
+    <!-- ECHARTS.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"
+      integrity="sha512-VdqgeoWrVJcsDXFlQEKqE5MyhaIgB9yXUVaiUa8DR2J4Lr1uWcFm+ZH/YnzV5WqgKf4GPyHQ64vVLgzqGIchyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./curveChart.js" defer></script>
+    <script src="./pieChart.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- ICONFONT -->
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_2979008_5s88pl5lcq5.css"
+    />
+    <title>天勤测试</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ECHARTS.JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"
-    integrity="sha512-VdqgeoWrVJcsDXFlQEKqE5MyhaIgB9yXUVaiUa8DR2J4Lr1uWcFm+ZH/YnzV5WqgKf4GPyHQ64vVLgzqGIchyw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </script>
-  <link rel="stylesheet" href="./index.css">
-  <!-- ICONFONT -->
-  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_2979008_5s88pl5lcq5.css">
-  <title>天勤测试</title>
-</head>
+  <body>
+    <header>
+      <!-- 占位图 -->
+      <img src="https://fakeimg.pl/150x40/" class="left-logo" />
+      <div class="right-tool">
+        <i class="iconfont icon-chilun"></i>
+        <i class="iconfont icon-tongzhi"></i>
+        <button class="logout-btn">Log Out</button>
+      </div>
+    </header>
 
-<body>
-  <header>
-    <!-- 占位图 -->
-    <img src="https://fakeimg.pl/150x40/" class="left-logo">
-    <div class="right-tool">
-      <i class="iconfont icon-chilun"></i>
-      <i class="iconfont icon-tongzhi"></i>
-      <button class="logout-btn">Log Out</button>
-    </div>
-  </header>
+    <main>
+      <div class="func-choose">
+        <div class="intro">
+          <h2>Audience Overview</h2>
+          <h4 style="color: gray">Roseville，CA</h4>
+        </div>
+        <div class="choose">
+          <ul>
+            <li><a href="#DASHBOARD">DASHBOARD</a></li>
+            <li><a href="#PROJECTS">PROJECTS</a></li>
+            <li><a href="#CALENDAR">CALENDAR</a></li>
+            <li><a href="#MAILBOX">MAILBOX</a></li>
+            <li><a href="#SETTINGS">SETTINGS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display: flex; height: 300px">
+        <div class="swiper">
+          <ul class="swiper-images">
+            <li>
+              <a href="javascript:;"
+                ><img src="https://fakeimg.pl/637x284/"
+              /></a>
+            </li>
+            <li>
+              <a href="javascript:;"
+                ><img src="https://fakeimg.pl/637x285/"
+              /></a>
+            </li>
+            <li>
+              <a href="javascript:;"
+                ><img src="https://fakeimg.pl/637x286/"
+              /></a>
+            </li>
+            <li>
+              <a href="javascript:;"
+                ><img src="https://fakeimg.pl/637x287/"
+              /></a>
+            </li>
+            <li>
+              <a href="javascript:;"
+                ><img src="https://fakeimg.pl/637x288/"
+              /></a>
+            </li>
+          </ul>
+          <!-- 左箭头 -->
+          <div class="prev"></div>
+          <div class="next"></div>
 
-  <main>
-    <div class="func-choose">
-      <div class="intro">
-        <h2>Audience Overview</h1>
-          <h4 style="color:gray">Roseville，CA</h4>
+          <ul class="swiper-dots"></ul>
+        </div>
+        <div id="request">
+          <img src="https://fakeimg.pl/620x284/" />
+        </div>
       </div>
-      <div class="choose">
-        <ul>
-          <li><a href="#">DASHBOARD</a></li>
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">CALENDAR</a></li>
-          <li><a href="#">MAILBOX</a></li>
-          <li><a href="#">SETTINGS</a></li>
-        </ul>
+      <div class="chart-area">
+        <div id="curve" style="width: 100%; height: 300px"></div>
+        <div class="pie-bar">
+          <div id="pie" style="width: 50%; height: 300px"></div>
+          <div id="bar" style="width: 50%; height: 300px"></div>
+        </div>
       </div>
-    </div>
-    <div class="chart-area">
-      <div id="curve" style="width: 100%;height: 300px;"></div>
-      <div class="pie-bar">
-        <div id="pie" style="width: 50%;height: 400px;"></div>
-        <div id="bar" style="width: 50%;height: 400px;"></div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    footer
-  </footer>
-</body>
-<script src="./curveChart.js"></script>
-<script src="./pieChart.js"></script>
-<script src="index.js"></script>
-<script src="swiper.js"></script>
+    </main>
+
+    <footer>
+      <section class="footer-container">
+        <section class="footer-columns">
+          <div>
+            <img src="https://fakeimg.pl/150x40/" />
+          </div>
+          <div class="footer-column">
+            <div class="footer-item">
+              <a href="#">NEWS</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">CHANNELS</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">OVERVIEW</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">TIMELINE</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <div class="footer-item">
+              <a href="#">SPORT</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">CULTURE</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">NATURE</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">MUSIC</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <div class="footer-item">
+              <a href="#">WEATHER</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">AUTOS</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">LOCAL</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">SHOP</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <div class="footer-item">
+              <a href="#">FUTURE</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">FOOD</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">EARTH</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">TV</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <div class="footer-item">
+              <a href="#">TRAVEL</a>
+            </div>
+            <div class="footer-item">
+              <a href="#">RADIO</a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </footer>
+  </body>
 
 </html>

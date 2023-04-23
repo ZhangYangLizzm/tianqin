@@ -2,6 +2,7 @@
     --main-color: #f5f8f9;
     --footer-color: #202124;
     --main-margin: 8px;
+    --padding: 32px 100px;
 }
 
 html, body {
@@ -13,6 +14,11 @@ html, body {
     bottom: 0;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 body {
     margin: auto;
     width: 75%;
@@ -22,7 +28,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: var(--padding);
     align-items: center;
 }
 
@@ -48,6 +54,7 @@ header {
 main {
     background-color: var(--main-color);
     color: black;
+    padding: var(--padding);
 }
 
 .func-choose {
@@ -72,23 +79,88 @@ main {
     margin-right: var(--main-margin);
 }
 
-.choose ul li:first-child {
+.choose ul a {
+    color: black;
+}
+
+.choose ul a:focus {
     border-bottom: 1px solid black;
 }
 
-.choose ul li:hover{
-    background-color: gray;
+.swiper {
+    user-select: none;
+    background-color: white;
+    margin-right: var(--main-margin);
+    padding: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
-footer {
-    background-color: var(--footer-color);
-    color: white
+.swiper-images {
+    display: flex;
+    position: relative;
+}
+
+
+.prev{
+    left:20px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    transform: rotate(-45deg);
+
+}
+
+.next{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+
+
+}
+.prev:hover,.next:hover{
+    cursor: pointer;
+    border-color: #ff6900;
+}
+.swiper-dots{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-dots li{
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(128, 128, 128, 0.349);
+    margin: 3px;
+}
+.swiper-dots li:hover{
+    background-color: white;
+}
+
+.dot-active{
+    height: 16px!important;
+    background-color: white!important;
+}
+
+#request {
+    padding: 8px;
+    background-color: white;
 }
 
 #curve {
     background-color: white;
-    margin-bottom: calc(2*var(--main-margin));
     padding: 16px 0px;
+    margin: calc(2*var(--main-margin)) auto;
 
 }
 
@@ -103,7 +175,33 @@ footer {
     padding: 16px 0px;
 
 }
-.pie-bar{
-    display: flex;
 
+.pie-bar {
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    background-color: var(--footer-color);
+    color: white;
+    position: relative;
+    padding: 75px 0;
+}
+
+.footer-container {
+    padding-inline: 48px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column a {
+    color: white
+}
+
+a {
+    text-decoration: none;
 }
