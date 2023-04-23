@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ECHARTS.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"
+    integrity="sha512-VdqgeoWrVJcsDXFlQEKqE5MyhaIgB9yXUVaiUa8DR2J4Lr1uWcFm+ZH/YnzV5WqgKf4GPyHQ64vVLgzqGIchyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </script>
+  <link rel="stylesheet" href="./index.css">
+  <!-- ICONFONT -->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_2979008_5s88pl5lcq5.css">
+  <title>天勤测试</title>
+</head>
+
+<body>
+  <header>
+    <!-- 占位图 -->
+    <img src="https://fakeimg.pl/150x40/" class="left-logo">
+    <div class="right-tool">
+      <i class="iconfont icon-chilun"></i>
+      <i class="iconfont icon-tongzhi"></i>
+      <button class="logout-btn">Log Out</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="func-choose">
+      <div class="intro">
+        <h2>Audience Overview</h1>
+          <h4 style="color:gray">Roseville，CA</h4>
+      </div>
+      <div class="choose">
+        <ul>
+          <li><a href="#">DASHBOARD</a></li>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="#">CALENDAR</a></li>
+          <li><a href="#">MAILBOX</a></li>
+          <li><a href="#">SETTINGS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="chart-area">
+      <div id="curve" style="width: 100%;height: 300px;"></div>
+      <div class="pie-bar">
+        <div id="pie" style="width: 50%;height: 400px;"></div>
+        <div id="bar" style="width: 50%;height: 400px;"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    footer
+  </footer>
+</body>
+<script src="./curveChart.js"></script>
+<script src="./pieChart.js"></script>
+<script src="index.js"></script>
+<script src="swiper.js"></script>
+
+</html>

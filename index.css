@@ -1,0 +1,109 @@
+:root {
+    --main-color: #f5f8f9;
+    --footer-color: #202124;
+    --main-margin: 8px;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+body {
+    margin: auto;
+    width: 75%;
+    border: 1px solid black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+}
+
+.logout-btn {
+    background-color: red;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    height: 40px;
+    width: 150px;
+    color: white;
+}
+
+.iconfont {
+    margin-right: var(--main-margin);
+}
+
+.right-tool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--main-color);
+    color: black;
+}
+
+.func-choose {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro h2, .intro h4 {
+    margin: var(--main-margin)
+}
+
+.choose ul {
+    list-style: none;
+    margin: auto;
+}
+
+.choose ul li {
+    float: left;
+    margin-right: var(--main-margin);
+}
+
+.choose ul li:first-child {
+    border-bottom: 1px solid black;
+}
+
+.choose ul li:hover{
+    background-color: gray;
+}
+
+footer {
+    background-color: var(--footer-color);
+    color: white
+}
+
+#curve {
+    background-color: white;
+    margin-bottom: calc(2*var(--main-margin));
+    padding: 16px 0px;
+
+}
+
+#pie {
+    margin-right: 8px;
+    background-color: white;
+    padding: 16px 0px;
+}
+
+#bar {
+    background-color: white;
+    padding: 16px 0px;
+
+}
+.pie-bar{
+    display: flex;
+
+}
