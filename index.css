@@ -14,15 +14,15 @@ html, body {
     bottom: 0;
 }
 
-ul{
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 body {
     margin: auto;
     width: 75%;
-    border: 1px solid black;
 }
 
 header {
@@ -72,6 +72,7 @@ main {
 .choose ul {
     list-style: none;
     margin: auto;
+    font-weight: bold;
 }
 
 .choose ul li {
@@ -94,6 +95,7 @@ main {
     padding: 8px;
     position: relative;
     overflow: hidden;
+    width: 50%;
 }
 
 .swiper-images {
@@ -102,8 +104,8 @@ main {
 }
 
 
-.prev{
-    left:20px;
+.prev {
+    left: 20px;
     top: 50%;
     width: 10px;
     height: 10px;
@@ -114,7 +116,7 @@ main {
 
 }
 
-.next{
+.next {
     position: absolute;
     top: 50%;
     right: 8px;
@@ -126,35 +128,97 @@ main {
 
 
 }
-.prev:hover,.next:hover{
+
+.prev:hover, .next:hover {
     cursor: pointer;
     border-color: #ff6900;
 }
-.swiper-dots{
+
+.swiper-dots {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
-.swiper-dots li{
+
+.swiper-dots li {
     float: left;
     width: 8px;
     height: 8px;
     background-color: rgba(128, 128, 128, 0.349);
     margin: 3px;
 }
-.swiper-dots li:hover{
+
+.swiper-dots li:hover {
     background-color: white;
 }
 
-.dot-active{
-    height: 16px!important;
-    background-color: white!important;
+.dot-active {
+    height: 16px !important;
+    background-color: white !important;
 }
 
 #request {
     padding: 8px;
     background-color: white;
+    width: 50%;
+}
+
+.request-header {
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.request-header p{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.request-header button {
+    color: black;
+    border: 1px solid gray;
+    background-color: white;
+    height: 40px;
+    width: 120px;
+    padding: 0px 16px;
+    border: 1px solid #f0f0f1;
+    box-shadow: 1px 1px 0 #f0f0f1;
+    border-radius: 3px;
+}
+
+.request-header button:hover{
+    cursor: pointer;
+    background-color:red;
+}
+.description {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.description-item1 {
+    flex: 2;
+}
+
+.description-item2 {
+    flex: 3;
+}
+
+.description-item3 {
+    flex: 1;
+}
+
+.description-item3 button {
+    background-color: #5dd054;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
 }
 
 #curve {
@@ -181,7 +245,7 @@ main {
     justify-content: center;
 }
 
-
+/*  */
 footer {
     background-color: var(--footer-color);
     color: white;
